@@ -40,6 +40,26 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
+	<!-- Facebook Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window,document,'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '4977344292394543'); 
+		fbq('track', 'PageView');
+	</script>
+	<noscript>
+		<img height="1" width="1" 
+		src="https://www.facebook.com/tr?id=4977344292394543&ev=PageView
+		&noscript=1"/>
+	</noscript>
+	<!-- End Facebook Pixel Code -->
+
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -280,7 +300,12 @@
 
 						</ul>
 						<div class="price-btn">
-							<a href="https://docs.google.com/forms/d/1D2yTWcLUb_VAin7DH9u7lwRJ50p4CbiCQUrwOXxg_D0/viewform?edit_requested=false" target="_blank"><button class="outline-btn">Register for Classes</button></a>
+							<a href="https://docs.google.com/forms/d/1D2yTWcLUb_VAin7DH9u7lwRJ50p4CbiCQUrwOXxg_D0/viewform?edit_requested=false" target="_blank"><button class="outline-btn" id="registerButton">Register for Classes</button></a>
+							<script type="text/javascript">
+								$('#$registerButton').click(function() {
+								  fbq('track', 'CompleteRegistration');
+								});
+							  </script>
 						</div>
 					</div>
 				</div>
